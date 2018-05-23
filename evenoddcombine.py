@@ -33,13 +33,13 @@ def main():
             try:
                 newdict[newindex] = evendict[i]
             except KeyError: #Leere Adressen werden manchmal beim Speichern übersprungen
-                #newdicteven[newindex] = 0xFF
+                #newdicteven[newindex] = 0x00
                 pass
             newindex+=1
             try:
                 newdict[newindex] = odddict[i]
             except KeyError: #Leere Adressen werden manchmal beim Speichern übersprungen
-                #newdicteven[newindex] = 0xFF
+                #newdicteven[newindex] = 0x00
                 pass
             newindex+=1
         newhex = IntelHex(newdict)
